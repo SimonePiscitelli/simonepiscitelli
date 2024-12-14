@@ -1,0 +1,192 @@
+/* Stile per il body e impostazioni di base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #171616;
+    color: white;
+    position: relative;
+    z-index: 10; /* Assicura che il menu sia sopra */
+}
+
+.header-container a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu a tendina verticale */
+.nav-left ul, .nav-right ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-left ul li, .nav-right ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 120%;
+    background-color: white;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    width: 150px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    flex-direction: column;
+    z-index: 20; /* Assicura che il menu a tendina sia sopra le immagini */
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 15px;
+    color: #171616;
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+/* Visualizza il menu a tendina gradualmente */
+.nav-left ul li:hover .dropdown {
+    display: flex;
+    opacity: 1;
+}
+
+/*
+ Sottolineatura graduale per le voci del menu a tendina 
+.dropdown li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; Posiziona la sottolineatura direttamente sotto la scritta 
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.dropdown li a:hover::after {
+    bottom:0 ; Posiziona la sottolineatura esattamente sotto la parola 
+    width: 100%;  Adatta la lunghezza della sottolineatura alla parola 
+}
+*/
+
+
+/* Sottolineatura graduale per le voci di navigazione a destra */
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-right a:hover::after {
+    width: 100%;
+}
+
+/* Stile per il logo */
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 250px;
+    vertical-align: middle;
+}
+
+/* Sections */
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: #171616;
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+}
+
+.content p, .content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 0.5rem;
+}
+
+
+/*Buttons*/
+
+/* Stile per i pulsanti */
+.section-button {
+    display: inline-block; /* Allineamento orizzontale */
+    margin-top: 8px; /* Margine sopra il pulsante */
+    padding: 10px 20px;
+    margin: 30px;
+    margin-left: 470px;
+    border: 2px solid black;
+    color: black;
+    background-color: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.section-button:hover {
+    background-color: #171616;
+    color: white;
+}
+
+
+/* Stile per il footer */
+footer {
+    background-color: #171616;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: small;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
