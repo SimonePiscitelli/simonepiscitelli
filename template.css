@@ -118,69 +118,35 @@ body {
     vertical-align: middle;
 }
 
-/* Sections */
 
-.content {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.content h1 {
-    font-size: 2rem;
-    color: #171616;
-}
-
-.content h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 1.5rem;
-}
-
-.content p, .content ul {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.content ul {
-    padding-left: 20px;
-}
-
-.content ul li {
-    margin-bottom: 0.5rem;
-}
-
-
-/*Buttons*/
-
-/* Stile per i pulsanti */
-.button-container {
-    display: flex; /* Dispone i pulsanti in fila orizzontale */
-    justify-content: center; /* Centra i pulsanti orizzontalmente */
-    gap: 20px; /* Distanza tra i pulsanti */
-    margin-top: 30px; /* Margine superiore per separare dal contenuto precedente */
+section-title {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .section-button {
-    display: inline-block; /* Mantiene l'allineamento inline */
+    position: absolute;
+    top: 100px;
+    left: 50px;
     padding: 10px 20px;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid white;
+    color: white;
     background-color: transparent;
     font-size: 1rem;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
-    margin-bottom: 40px;
 }
 
 .section-button:hover {
-    background-color: #171616;
-    color: white;
+    background-color: white;
+    color: #171616;
 }
-
-
 
 /* Stile per il footer */
 footer {
